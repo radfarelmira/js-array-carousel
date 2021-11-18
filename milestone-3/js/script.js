@@ -59,5 +59,46 @@ for ( let i = 0; i < items.length; i++){
 // Diamo la classe active ad un elemento
 let activeImage = 0;
 const allImages = document.getElementsByClassName('single-image');
+const thumbImages = document.getElementsByClassName('single-thumb');
 allImages[activeImage].classList.add('active');
+thumbImages[activeImage].classList.add('active');
+
+// Al click di prev e next, sposto le classi active all'immagine 
+const nextArrow = document.querySelector('.next');
+nextArrow.addEventListener('click', function() {
+    // Rimuovere active all'immagine corrente
+    allImages[activeImage].classList.remove('active');
+    thumbImages[activeImage].classList.remove('active');
+
+    // incrementare activeImage di 1 solo se non è l'ultima foto
+    // se l'immagine è l'ultima ricomincio da zero
+    if (activeImage < items.length - 1){
+        activeImage++;
+    } else {
+        activeImage = 0;
+    }
+
+    // assegnare all'immagine col nouvo indice la classe active
+    allImages[activeImage].classList.add('active');
+    thumbImages[activeImage].classList.add('active');
+});
+
+const prevArrow = document.querySelector('.prev');
+prevArrow.addEventListener('click', function() {
+    // Rimuovere activ all'immagine corrente
+    allImages[activeImage].classList.remove('active');
+    thumbImages[activeImage].classList.remove('active');
+
+    // decrementare activeImage di 1 solo se non è l'ultima foto
+    // se l'immagine è l'ultima ricomincio da zero
+    if ( activeImage > 0 ) {
+        activeImage--;
+    } else {
+        activeImage = items.length - 1;
+    }
+
+    // assegnare all'immagine col nouvo indice la classe active
+    allImages[activeImage].classList.add('active');
+    thumbImages[activeImage].classList.add('active');
+});
 
