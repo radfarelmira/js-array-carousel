@@ -28,3 +28,34 @@ const text = [
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
 
+// Prendiamo il big container e popoliamo con imaggini, titoli e text del array items, 
+//array title, array text
+const bigImagesContainer = document.querySelector('.big-images-container');
+console.log(bigImagesContainer)
+
+// Per ogni elemento di items array, title array e text array polpliamo i big images container
+for ( let i = 0; i < items.length; i++){
+    const thisPath = items[i];
+    const thisTitle = title[i];
+    const thisText = text[i];
+    
+    const newImageDiv =`
+    <div class="single-image">
+        <img src="${thisPath}" alt="Img ${i}">
+
+        <div class="single-image-text">
+            <h2>${thisTitle}</h2>
+            <p>${thisText}</p>
+        </div>
+    </div>
+    `;
+
+    bigImagesContainer.innerHTML += newImageDiv
+
+}
+
+// Diamo la classe active ad un elemento
+let activeImage = 0;
+const allImages = document.getElementsByClassName('single-image');
+allImages[activeImage].classList.add('active');
+
