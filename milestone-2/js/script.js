@@ -31,7 +31,8 @@ const text = [
 // Prendiamo il big container e popoliamo con imaggini, titoli e text del array items, 
 //array title, array text
 const bigImagesContainer = document.querySelector('.big-images-container');
-console.log(bigImagesContainer)
+const thumbsContainer = document.querySelector('.thumbs')
+console.log(thumbsContainer)
 
 // Per ogni elemento di items array, title array e text array polpliamo i big images container
 for ( let i = 0; i < items.length; i++){
@@ -41,7 +42,7 @@ for ( let i = 0; i < items.length; i++){
     
     const newImageDiv =`
     <div class="single-image">
-        <img src="${thisPath}" alt="Img ${i}">
+        <img src="${thisPath}" alt="${thisTitle}">
 
         <div class="single-image-text">
             <h2>${thisTitle}</h2>
@@ -51,6 +52,15 @@ for ( let i = 0; i < items.length; i++){
     `;
 
     bigImagesContainer.innerHTML += newImageDiv
+
+    // Popoliamo thumbs a destra
+    const newThumbDiv = `
+    <div class="single-thumb">
+        <img src="${thisPath}" alt="${thisTitle}">
+    </div>
+    `;
+
+    thumbsContainer.innerHTML += newThumbDiv
 
 }
 
