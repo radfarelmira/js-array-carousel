@@ -34,7 +34,6 @@ const text = [
 //array title, array text
 const bigImagesContainer = document.querySelector('.big-images-container');
 const thumbsContainer = document.querySelector('.thumbs')
-console.log(thumbsContainer)
 
 // Per ogni elemento di items array, title array e text array polpliamo i big images container
 for ( let i = 0; i < items.length; i++){
