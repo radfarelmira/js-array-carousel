@@ -1,7 +1,7 @@
 // MILESTONE 1
 // Per prima cosa, creiamo il markup statico: costruiamo il container e inseriamo l'immagine 
 // grande a sinistra e le thumbnails sulla destra in modo da poter stilare lo slider; avremo 
-// ùcosì la struttura base e gli stili pronti per poterci poi concentrare solamente sull'aspetto logico.
+// così la struttura base e gli stili pronti per poterci poi concentrare solamente sull'aspetto logico.
 
 const items = [
     'img/01.jpg',

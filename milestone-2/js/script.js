@@ -57,5 +57,8 @@ for ( let i = 0; i < items.length; i++){
 // Diamo la classe active ad un elemento
 let activeImage = 0;
 const allImages = document.getElementsByClassName('single-image');
+const thumbImages = document.getElementsByClassName('single-thumb');
 allImages[activeImage].classList.add('active');
+thumbImages[activeImage].classList.add('active');
+
 
