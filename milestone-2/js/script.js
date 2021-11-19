@@ -61,7 +61,6 @@ for ( let i = 0; i < items.length; i++){
     `;
 
     thumbsContainer.innerHTML += newThumbDiv
-
 }
 
 // Diamo la classe active ad un elemento
